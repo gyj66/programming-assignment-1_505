@@ -50,9 +50,9 @@ return compnums;
 
 	InsertionSort result=new InsertionSort();
 	long start=System.currentTimeMillis();
-	int comparnums=result.sort(ar);
+	String comparnums=String.valueOf(result.sort(ar));
     long end=System.currentTimeMillis(); 
-    long total=start-end;
+    String total=String.valueOf(start-end);
 	for(int i=0;i<ar.size();i++)
 	{
 
@@ -60,7 +60,7 @@ return compnums;
 	}
 
  System.err.println("runtime"+","+total);
- System.err.println("comparisons"+","+total);
+ System.err.println("comparisons"+","+comparnums);
 
 
 }
