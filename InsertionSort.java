@@ -46,10 +46,10 @@ return compnums;
 
 
 	InsertionSort result=new InsertionSort();
-	Integer start=System.currentTimeMillis();
+	long start=System.currentTimeMillis();
 	int comparnums=result.sort(ar);
-    Integer end=System.currentTimeMillis(); 
-    Integer total=start-end;
+    long end=System.currentTimeMillis(); 
+    long total=start-end;
 	for(int i=0;i<ar.size();i++)
 	{
 
