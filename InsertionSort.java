@@ -14,12 +14,16 @@ class InsertionSort
    	int key=list.get(i);
    	int j=i-1;
 
-     while(j>=0&&list.get(j).compareTo(key)>0)  
+     while(j>=0)  
 
     {
-        list.set(j+1,list.get(j));
-        j--;
         compnums++;
+        if(list.get(j).compareTo(key)>0)
+       { list.set(j+1,list.get(j));
+        j--;
+        }
+        else
+          break;
 
     }
 list.set(j+1,key); 
