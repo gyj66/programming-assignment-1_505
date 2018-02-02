@@ -4,9 +4,9 @@ import java.io.*;
 class InsertionSort
 {
 
-    public int sort(List<Integer> list)
+    public Integer sort(List<Integer> list)
 {
-     int compnums=0;
+     Integer compnums=0;
    for(int i=1;i<list.size();i++)
 
 {
