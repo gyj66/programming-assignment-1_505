@@ -34,9 +34,11 @@ return compnums;
  public static void main(String[] args) {
 
  BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    Integer len=Integer.parseInt(in.readLine());
+	 String line;
+	 line=in.readLine();
+    Integer len=Integer.parseInt(line);
     ArrayList<Integer> ar=new ArrayList<>(len);
-	String line;
+	
 	while((line=in.readLine())!=null)
 	{
        ar.add(Integer.parseInt(line));
