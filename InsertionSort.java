@@ -56,7 +56,7 @@ return compnums;
 	long start=System.currentTimeMillis();
 	String comparnums=Integer.toString(result.sort(ar));
     long end=System.currentTimeMillis(); 
-    String total=String.valueOf(start-end);
+    String total=String.valueOf(end);
 	for(int i=0;i<ar.size();i++)
 	{
 
