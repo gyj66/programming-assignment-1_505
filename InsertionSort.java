@@ -64,7 +64,7 @@ return compnums;
 		System.out.println(ar.get(i));
 	}
 
- System.err.println("runtime"+","+runt);
+ System.err.println("runtime"+","+total);
  System.err.println("comparisons"+","+comparnums);
 
 
