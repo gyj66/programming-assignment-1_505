@@ -117,7 +117,7 @@ return compnums;
 
   MergeSort result=new MergeSort();
   long start=System.currentTimeMillis();
-	String comparnums=Integer.toString(result.sort(ar,0,ar.size()-1));
+	Integer comparnums=result.sort(ar,0,ar.size()-1);
     long end=System.currentTimeMillis(); 
      long total=end-start;
 
