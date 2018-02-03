@@ -28,8 +28,8 @@ return comprisons;
 
   {
   	   int compnums=0;
-  	   int n1=m-l+1;
-  	   int n2=r-m;
+  	   int n1=m-l;
+  	   int n2=r-m+1;
        ArrayList<Integer> L=new ArrayList<>();
        ArrayList<Integer> R=new ArrayList<>();
 
