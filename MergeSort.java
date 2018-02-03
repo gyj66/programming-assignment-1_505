@@ -43,7 +43,7 @@ for(int i=0;i<n1;i++)
   for(int j=0;j<n2;j++)
 {
    
-   L.add(list.get(m+1+j));
+   R.add(list.get(m+1+j));
 
 }
 
