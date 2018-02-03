@@ -36,14 +36,14 @@ return comprisons;
 for(int i=0;i<n1;i++)
 {
    
-   L.add(list.get(l+i))
+   L.add(list.get(l+i));
 
 }
 
   for(int j=0;j<n2;j++)
 {
    
-   L.add(list.get(m+1+j))
+   L.add(list.get(m+1+j));
 
 }
 
