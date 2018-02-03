@@ -54,7 +54,7 @@ int k=l;
 while(i<n1&&j<n2)
 {
   compnums++;
-if(R.get(j)<L.get(i))
+if(R.get(j).compareTo(L.get(i))<0)
 {
 
    list.set(k,R.get(j));
