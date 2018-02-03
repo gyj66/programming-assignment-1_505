@@ -14,8 +14,8 @@ class MergeSort
   	
   {	int m=(r+l)/2;
 
-  sort(list,l,m);
-  sort(list,m+1,r);
+  comprisons+=sort(list,l,m);
+  comprisons+=sort(list,m+1,r);
   comprisons+=merge(list,l,m,r);
 
 }
