@@ -57,14 +57,14 @@ return compnums;
 	String comparnums=Integer.toString(result.sort(ar));
     long end=System.currentTimeMillis(); 
      long total=end-start;
-    String runt=String.valueOf(total);
+   
 	for(int i=0;i<ar.size();i++)
 	{
 
 		System.out.println(ar.get(i));
 	}
 
- System.err.println("runtime"+","+end);
+ System.err.println("runtime"+","+total);
  System.err.println("comparisons"+","+comparnums);
 
 
