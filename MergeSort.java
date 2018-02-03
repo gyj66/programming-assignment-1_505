@@ -12,7 +12,7 @@ class MergeSort
 
   if(r>l)
   	
-  {	int m=(r+l)/2;
+  {	int m=(r-l+1)/2;
 
   comprisons+=sort(list,l,m-1);
   comprisons+=sort(list,m,r);
