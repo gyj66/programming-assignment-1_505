@@ -1,4 +1,6 @@
-
+import java.lang.*;
+import java.util.*;
+import java.io.*;
 
 
 class HeapSort
@@ -33,7 +35,7 @@ class HeapSort
 
          if((size-1)%2==0)
          {
-         	int start=(size-3)/2
+         	int start=(size-3)/2;
             int pindx=start;
 
             while(pindx>=0)
@@ -122,4 +124,5 @@ class HeapSort
 
 
 
+}
 }
