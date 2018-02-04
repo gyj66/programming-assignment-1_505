@@ -6,39 +6,42 @@ import java.io.*;
 class HeapSort
 {
 
-   public void sort(List<Integer> list)
+    public void sort(List<Integer> list)
    { 
-   	 int size=list.size();
-     
-     for(int i=size/2-1;i>=0;i--)
-        heapify(list,size,i);
+   	  int size=list.size();
 
-        for(int i=size-1;i>=0;i--) 
-        {
-          int tep=list.get(0);
-           list.set(0,list.get(i));
-           list.set(i,tep);
-           heapify(list,i,0);
+       while(size>=1)
+        
+      {  
 
+      	 heapify(list,size);
+        int tep=list.get(0);
+        list.set(0,list.get(size-1));
+        list.set(size-1,tep);
+        size--;
+
+     }
      
 
 
     
 
    }
-   }
 
- public void heapify(List<Integer> list,int size,int i)
+ public void heapify(List<Integer> list,int size)
 
      {
           
 
-        int largest=i;
-     	int l=i*2+1;
-         int r=i*2+2;
+        
+         int start=size/2-1;
+          int pindx=start;
 
-         
-            
+          while(pindx>=0)
+          {
+             int l=pindx*2+1;
+             int r=pindx*2+2;
+             int largest=pindx;
 
              if(l<size&&list.get(largest)<list.get(l))
               largest=l;
@@ -46,16 +49,20 @@ class HeapSort
         if(r<size&&list.get(largest)<list.get(r))
               largest=r;
 
-         if(largest!=i)
+
+         if(largest!=pindx)
          {
          	int tep=list.get(largest);
-         	list.set(largest,list.get(i));
-         	list.set(i,tep);
-             heapify(list,size,largest);
+         	list.set(largest,list.get(pindx));
+         	list.set(pindx,tep);
+          if(largest<=start)
+             pindx=largest;
+           else
+           	pindx--;
          }
-        
-
-        
+        else
+             pindx--;
+          } 
           
           }
 
