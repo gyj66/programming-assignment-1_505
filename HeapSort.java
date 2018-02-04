@@ -33,66 +33,35 @@ class HeapSort
      {
           
 
-         if((size-1)%2==0)
-         {
-         	int start=(size-3)/2;
-            int pindx=start;
+        
+         int start=size/2-1;
+          int pindx=start;
 
-            while(pindx>=0)
-           { int maxc=list.get(pindx*2+2).compareTo(list.get(pindx*2+1))>0?pindx*2+2:pindx*2+1;
-            if(list.get(pindx).compareTo(list.get(maxc))<0)
-            {
-               int tep=list.get(pindx);
-               list.set(pindx,list.get(maxc));
-               list.set(maxc,tep);
+          while(pindx>=0)
+          {
+             int l=pindx*2+1;
+             int r=pindx*2+2;
+             int largest=pindx;
+
+             if(l<size&&list.get(pindx)<list.get(l))
+              largest=l;
+
+        if(r<size&&list.get(pindx)<list.get(r))
+              largest=r;
 
 
-            }
-
-
-            if(maxc<start)
-            	pindx=maxc;
+            if(largest<start)
+            	pindx=largest;
             else
              pindx--;
           } 
+          
+          }
 
 
-         }
-
-         else
-         {
-            int start=(size-2)/2;
-            int pindx=start;
-            
-            int maxc=pindx*2+1;
-            if(list.get(pindx).compareTo(list.get(maxc))<0)
-            {
-               int tep=list.get(pindx);
-               list.set(pindx,list.get(maxc));
-               list.set(maxc,tep);
 
 
-            }
-            while(pindx>=0)
-         {   maxc=list.get(pindx*2+2).compareTo(list.get(pindx*2+1))>0?pindx*2+2:pindx*2+1;
-            if(list.get(pindx).compareTo(list.get(maxc))<0)
-            {
-               int tep=list.get(pindx);
-               list.set(pindx,list.get(maxc));
-               list.set(maxc,tep);
-
-
-            }
-
-      
-            if(maxc<start)
-            	pindx=maxc;
-            else
-             pindx--;
-
-}
-
-         }
+         
          
 
      }
