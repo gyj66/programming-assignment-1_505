@@ -105,6 +105,7 @@ class HeapSort
 	{
 
 		System.out.println(ar.get(i));
+	
 	}
 
  System.err.println("runtime"+","+total);
