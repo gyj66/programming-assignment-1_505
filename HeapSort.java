@@ -6,7 +6,7 @@ import java.io.*;
 class HeapSort
 {
 
-   public void sort(List<Integer> list)
+   public Integer sort(List<Integer> list)
    { 
    	 int size=list.size();
    	 int comparnums=0;
