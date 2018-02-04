@@ -8,19 +8,18 @@ class HeapSort
 
    public void sort(List<Integer> list)
    { 
-   	  int size=list.size();
+   	 int size=list.size();
+     
+     for(int i=size/2-1;i>=0;i--)
+        heapify(list,size,i);
 
-       while(size>=0)
-        
-      {  
+        for(int i=size-1;i>=0;i++) 
+        {
+          int tep=list.get(0);
+           list.set(0,list.get(i));
+           list.set(i,tep);
+           heapify(list,i,0);
 
-      	 heapify(list,size);
-        int tep=list.get(0);
-        list.set(0,list.get(size-1));
-        list.set(size-1,tep);
-        size--;
-
-     }
      
 
 
@@ -28,41 +27,34 @@ class HeapSort
 
    }
 
- public void heapify(List<Integer> list,int size)
+ public void heapify(List<Integer> list,int size,int i)
 
      {
           
 
-        
-         int start=size/2-1;
-          int pindx=start;
+        int largest=i;
+     	int l=i*2+1;
+         int r=i*2+2;
 
-          while(pindx>=0)
-          {
-             int l=pindx*2+1;
-             int r=pindx*2+2;
-             int largest=pindx;
+         
+            
 
-             if(l<size&&list.get(pindx)<list.get(l))
+             if(l<size&&list.get(i)<list.get(l))
               largest=l;
 
-        if(r<size&&list.get(pindx)<list.get(r))
+        if(r<size&&list.get(i)<list.get(r))
               largest=r;
 
-
-         if(largest!=pindx)
+         if(largest!=i)
          {
          	int tep=list.get(largest);
-         	list.set(largest,list.get(pindx));
-         	list.set(pindx,tep);
-          if(largest<=start)
-             pindx=largest;
-           else
-           	pindx--;
+         	list.set(largest,list.get(i));
+         	list.set(i,tep);
+             heapify(list,size,largest)
          }
-        else
-             pindx--;
-          } 
+        
+
+        
           
           }
 
