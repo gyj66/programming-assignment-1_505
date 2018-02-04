@@ -50,7 +50,7 @@ class HeapSort
          	int tep=list.get(largest);
          	list.set(largest,list.get(i));
          	list.set(i,tep);
-             heapify(list,size,largest)
+             heapify(list,size,largest);
          }
         
 
