@@ -39,17 +39,18 @@ class HeapSort
          
             
 
-             if(l<size&&list.get(largest)<list.get(l))
+             if(l<size)
              {
                 compnums++;
-             	largest=l;
+	    if(list.get(largest).compareTo(list.get(l))<0)
+                  largest=l;
              }
               
 
-        if(r<size&&list.get(largest)<list.get(r))
+        if(r<size)
               {
               	compnums++;
-
+           if(list.get(largest).compareTo(list.get(r))<0)
               	largest=r;
 
               }
