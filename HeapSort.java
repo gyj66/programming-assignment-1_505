@@ -10,7 +10,7 @@ class HeapSort
    { 
    	  int size=list.size();
 
-       while(size>1)
+       while(size>=0)
         
       {  
 
