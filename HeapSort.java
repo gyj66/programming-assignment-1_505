@@ -40,10 +40,10 @@ class HeapSort
          
             
 
-             if(l<size&&list.get(i)<list.get(l))
+             if(l<size&&list.get(largest)<list.get(l))
               largest=l;
 
-        if(r<size&&list.get(i)<list.get(r))
+        if(r<size&&list.get(largest)<list.get(r))
               largest=r;
 
          if(largest!=i)
