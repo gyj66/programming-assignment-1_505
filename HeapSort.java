@@ -26,6 +26,7 @@ class HeapSort
     
 
    }
+   }
 
  public void heapify(List<Integer> list,int size,int i)
 
