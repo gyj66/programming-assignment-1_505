@@ -10,7 +10,7 @@ class HeapSort
    { 
    	  int size=list.size();
 
-       while(size>=0)
+       while(size>=1)
         
       {  
 
@@ -95,7 +95,7 @@ class HeapSort
 
 	HeapSort result=new HeapSort();
 	long start=System.currentTimeMillis();
-	//Integer comparnums=result.sort(ar);
+	result.sort(ar);
     long end=System.currentTimeMillis(); 
      long total=end-start;
    
