@@ -55,11 +55,10 @@ class HeapSort
          	int tep=list.get(largest);
          	list.set(largest,list.get(pindx));
          	list.set(pindx,tep);
-
+           pindx=largest;
 
          }
-            if(largest<start)
-            	pindx=largest;
+            
             else
              pindx--;
           } 
