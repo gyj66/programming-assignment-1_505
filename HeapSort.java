@@ -4,7 +4,7 @@
 class HeapSort
 {
 
-   public Integer sort(List<Integer> list)
+   public void sort(List<Integer> list)
    { 
    	  int size=list.size();
 
@@ -26,7 +26,7 @@ class HeapSort
 
    }
 
- public Integer heapify(List<Integer> list,int size)
+ public void heapify(List<Integer> list,int size)
 
      {
           
@@ -107,7 +107,7 @@ class HeapSort
 
 	HeapSort result=new HeapSort();
 	long start=System.currentTimeMillis();
-	Integer comparnums=result.sort(ar);
+	//Integer comparnums=result.sort(ar);
     long end=System.currentTimeMillis(); 
      long total=end-start;
    
@@ -118,7 +118,7 @@ class HeapSort
 	}
 
  System.err.println("runtime"+","+total);
- System.err.println("comparisons"+","+comparnums);
+ //System.err.println("comparisons"+","+comparnums);
 
 
 
