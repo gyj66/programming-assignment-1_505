@@ -60,8 +60,7 @@ class HeapSort
            else
            	pindx--;
          }
-            
-            else
+        else
              pindx--;
           } 
           
