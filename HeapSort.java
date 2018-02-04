@@ -63,9 +63,18 @@ class HeapSort
          {
             int start=(size-2)/2;
             int pindx=start;
+            
+            int maxc=pindx*2+1;
+            if(list.get(pindx).compareTo(list.get(maxc))<0)
+            {
+               int tep=list.get(pindx);
+               list.set(pindx,list.get(maxc));
+               list.set(maxc,tep);
 
+
+            }
             while(pindx>=0)
-         {   int maxc=pindx*2+1;
+         {   maxc=list.get(pindx*2+2).compareTo(list.get(pindx*2+1))>0?pindx*2+2:pindx*2+1;
             if(list.get(pindx).compareTo(list.get(maxc))<0)
             {
                int tep=list.get(pindx);
