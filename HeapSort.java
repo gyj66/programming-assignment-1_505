@@ -41,7 +41,7 @@ class HeapSort
 
              if(l<size&&list.get(largest)<list.get(l))
              {
-                compnums++
+                compnums++;
              	largest=l;
              }
               
