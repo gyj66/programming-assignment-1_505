@@ -13,7 +13,7 @@ class HeapSort
      for(int i=size/2-1;i>=0;i--)
         heapify(list,size,i);
 
-        for(int i=size-1;i>=0;i++) 
+        for(int i=size-1;i>=0;i--) 
         {
           int tep=list.get(0);
            list.set(0,list.get(i));
