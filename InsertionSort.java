@@ -56,7 +56,7 @@ list.set(j+1,key);
 	long start=System.currentTimeMillis();
 	result.sort(ar);
     long end=System.currentTimeMillis(); 
-     long total=end-start;
+     Integer total= (int)(long)(end-start);
      
    
 	for(int i=0;i<ar.size();i++)
