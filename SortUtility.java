@@ -31,7 +31,7 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	
  int comparisons=0;
 long start=System.currentTimeMillis();
-     Integer comparnums=ar.sort(new Comparator<Integer>() {
+     ar.sort(new Comparator<Integer>() {
     @Override
     public int compare(Integer o1, Integer o2) {
         comparisons++;
@@ -40,6 +40,7 @@ long start=System.currentTimeMillis();
     });       
 long end=System.currentTimeMillis(); 
 long total=end-start;
+Integer comparnums=comparisons;
    
 	for(int i=0;i<ar.size();i++)
 	{
