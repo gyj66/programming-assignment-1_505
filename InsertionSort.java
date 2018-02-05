@@ -57,7 +57,7 @@ list.set(j+1,key);
 	result.sort(ar);
     long end=System.currentTimeMillis(); 
      long total=end-start;
-     Integer comparnums=InsertionSort.comparnums;
+     
    
 	for(int i=0;i<ar.size();i++)
 	{
@@ -66,7 +66,7 @@ list.set(j+1,key);
 	}
 
  System.err.println("runtime"+","+total);
- System.err.println("comparisons"+","+comparnums);
+ System.err.println("comparisons"+","+InsertionSort.comparnums);
 
 
 }
