@@ -120,7 +120,7 @@ list.set(k,R.get(j));
   long start=System.currentTimeMillis();
 	result.sort(ar,0,ar.size()-1);
     long end=System.currentTimeMillis(); 
-     long total=end-start;
+    Integer total= (int)(long)(end-start);
 
 for(int i=0;i<ar.size();i++)
 	{
