@@ -3,10 +3,10 @@ import java.util.*;
 import java.io.*;
 class InsertionSort
 {
-
-    public Integer sort(List<Integer> list)
+ public static Integer comparnums=0;
+    public void sort(List<Integer> list)
 {
-     Integer compnums=0;
+    
    for(int i=1;i<list.size();i++)
 
 {
@@ -17,7 +17,7 @@ class InsertionSort
      while(j>=0)  
 
     {
-        compnums++;
+        InsertionSort.comparnums++;
         if(list.get(j).compareTo(key)>0)
        { list.set(j+1,list.get(j));
         j--;
@@ -30,7 +30,7 @@ list.set(j+1,key);
 
 }
 
-return compnums;
+
 
 }
 
@@ -54,9 +54,10 @@ return compnums;
 
 	InsertionSort result=new InsertionSort();
 	long start=System.currentTimeMillis();
-	Integer comparnums=result.sort(ar);
+	result.sort(ar);
     long end=System.currentTimeMillis(); 
      long total=end-start;
+     Integer comparnums=InsertionSort.comparnums;
    
 	for(int i=0;i<ar.size();i++)
 	{
