@@ -4,30 +4,31 @@ import java.io.*;
 
 class MergeSort
 {
+	public static Integer comparnums=0;
 
-  public Integer sort(List<Integer> list,int l,int r)
+  public void sort(List<Integer> list,int l,int r)
 
   {
-  	int comprisons=0;
+  	
 
   if(r>l)
   	
   {	int m=(r+l+1)/2;
 
-  comprisons+=sort(list,l,m-1);
-  comprisons+=sort(list,m,r);
-  comprisons+=merge(list,l,m,r);
+  sort(list,l,m-1);
+  sort(list,m,r);
+  merge(list,l,m,r);
 
 }
-return comprisons;
+
 
   }
 
 
-  public Integer merge(List<Integer> list,int l,int m,int r)
+  public void merge(List<Integer> list,int l,int m,int r)
 
   {
-  	   int compnums=0;
+  	   
   	   int n1=m-l;
   	   int n2=r-m+1;
        ArrayList<Integer> L=new ArrayList<>();
@@ -53,7 +54,7 @@ int k=l;
 
 while(i<n1&&j<n2)
 {
-  compnums++;
+ MergeSort.comparnums++;
 if(R.get(j).compareTo(L.get(i))<0)
 {
 
@@ -92,7 +93,7 @@ list.set(k,R.get(j));
 
 }
 
-return compnums;
+
 
   }
 
@@ -117,7 +118,7 @@ return compnums;
 
   MergeSort result=new MergeSort();
   long start=System.currentTimeMillis();
-	Integer comparnums=result.sort(ar,0,ar.size()-1);
+	result.sort(ar,0,ar.size()-1);
     long end=System.currentTimeMillis(); 
      long total=end-start;
 
@@ -128,7 +129,7 @@ for(int i=0;i<ar.size();i++)
 	}
 
 	 System.err.println("runtime"+","+total);
- System.err.println("comparisons"+","+comparnums);
+ System.err.println("comparisons"+","+MergeSort.comparnums);
 
 
  }
