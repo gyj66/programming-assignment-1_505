@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 class InsertionSort
 {
- public static Integer comparnums=0;
+ public static Integer comparnums=0;  //global count variable;
     public void sort(List<Integer> list)
 {
     
