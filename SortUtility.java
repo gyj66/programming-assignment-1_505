@@ -14,6 +14,7 @@ class SortUtility
 public static void main(String[] args)
 throws IOException {
 
+	SortUtility obj=new SortUtility();
 
 BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	 String line;
