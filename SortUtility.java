@@ -37,7 +37,7 @@ long start=System.currentTimeMillis();
     } 
     });       
 long end=System.currentTimeMillis(); 
-long total=end-start;
+Integer total= (int)(long)(end-start);
 Integer comparnums=SortUtility.comparisons;
    
 	for(int i=0;i<ar.size();i++)
