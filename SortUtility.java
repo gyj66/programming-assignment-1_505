@@ -3,12 +3,10 @@ import java.util.*;
 import java.io.*;
 
 
-
-
 class SortUtility
 {
        
-
+ public static int comparisons=0;
 
 
 public static void main(String[] args)
@@ -29,18 +27,18 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 	}
 	
-final int comparisons=0;
+
 long start=System.currentTimeMillis();
      ar.sort(new Comparator<Integer>() {
     @Override
     public int compare(Integer o1, Integer o2) {
-        comparisons++;
+        SortUtility.comparisons++;
         return o1.compareTo(o2);
     } 
     });       
 long end=System.currentTimeMillis(); 
 long total=end-start;
-Integer comparnums=comparisons;
+Integer comparnums=SortUtility.comparisons;
    
 	for(int i=0;i<ar.size();i++)
 	{
