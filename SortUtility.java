@@ -28,7 +28,8 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
        
 
 	}
-
+	
+ int comparisons=0;
 long start=System.currentTimeMillis();
      Integer comparnums=ar.sort(new Comparator<Integer>() {
     @Override
