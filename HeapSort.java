@@ -5,28 +5,28 @@ import java.io.*;
 
 class HeapSort
 {
-
-   public Integer sort(List<Integer> list)
+ public static Integer comparnums=0;
+   public void sort(List<Integer> list)
    { 
    	 int size=list.size();
-   	 int comparnums=0;
+   	 
      
      for(int i=size/2-1;i>=0;i--)
-        comparnums+=heapify(list,size,i);
+        heapify(list,size,i);
 
         for(int i=size-1;i>=0;i--) 
         {
           int tep=list.get(0);
            list.set(0,list.get(i));
            list.set(i,tep);
-          comparnums+=heapify(list,i,0);
+          heapify(list,i,0);
 
     }
-   return comparnums;
+   
 
    }
 
- public Integer heapify(List<Integer> list,int size,int i)
+ public void heapify(List<Integer> list,int size,int i)
 
      {
           
@@ -41,7 +41,7 @@ class HeapSort
 
              if(l<size)
              {
-                compnums++;
+                HeapSort.comparnums++;
 	    if(list.get(largest).compareTo(list.get(l))<0)
                   largest=l;
              }
@@ -49,7 +49,7 @@ class HeapSort
 
         if(r<size)
               {
-              	compnums++;
+              HeapSort.comparnums++;
            if(list.get(largest).compareTo(list.get(r))<0)
               	largest=r;
 
@@ -65,7 +65,7 @@ class HeapSort
          }
         
 
-        return compnums;
+        
           
           }
 
@@ -98,7 +98,7 @@ class HeapSort
 
 	HeapSort result=new HeapSort();
 	long start=System.currentTimeMillis();
-	Integer comparnums =result.sort(ar);
+	result.sort(ar);
     long end=System.currentTimeMillis(); 
      long total=end-start;
    
@@ -110,7 +110,7 @@ class HeapSort
 	}
 
  System.err.println("runtime"+","+total);
- System.err.println("comparisons"+","+comparnums);
+ System.err.println("comparisons"+","+HeapSort.comparnums);
 
 
 
